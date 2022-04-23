@@ -1,0 +1,41 @@
+.arrowDown {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.guidLine {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.resendLink {
+    img {
+        margin-right: 5px;
+        border: none;
+    }
+
+    .resend {
+        font-size: 14px;
+        color: #999;
+        text-decoration: none;
+    }
+}
+
+textarea {
+    width: 150px;
+    height: 90px;
+}
+
+textarea::placeholder {
+    color: #888;
+    font-weight: bold;
+    text-decoration: underline;
+    transform: scaleX(1.2);
+    transform: scaleY(2);
+    transform: translateY(15px);
+}

@@ -1,29 +1,42 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLock, faPhone, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import Input from '../Components/Input';
 import PageLayout from '../Components/PageLayout';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import flag from '../Images/flag.png'
-import background from "../Images/bg.png";
+import flag from '../Images/flag.png';
+import background from "../Images/bg3.png";
+import arrowDown from '../Images/arrowDown.png';
+import styles from './Login.module.scss';
 
 function Login() {
   return (
     <PageLayout
-      buttonText="Signup"
+      buttonText="Login"
       background={background}
-      header="Get your own account"
-      body={<div className="input-group mb-3">
-        <div className="input-group-prepend">
-          <span className="input-group-text d-flex justify-content-center align-items-center h-100 bg" id="basic-addon1">
-            <FontAwesomeIcon icon={faPhone} />
-          </span>
-        </div>
-        <div className="input-group-prepend">
-          <span className="input-group-text d-flex justify-content-center align-items-center h-100 bg" id="basic-addon1">
-            <img src={flag} />
-          </span>
-        </div>
-
-        <input type="text" className="form-control" placeholder="+2  XXXXXXXXX" aria-label="Username" aria-describedby="basic-addon1" />
+      header="Welcome Back!"
+      buttonStyle={"78px"}
+      footer={<div className="text-center fs-6 pt-3">
+        <span href="#">Forgot Password?</span>
+        <a href="/reset-password" className={styles.loginLink}>Reset now</a>
       </div>}
+
+      body={<div>
+        <Input
+          placeholder={"+2 XXXXXXXX"}
+          leftIcon={<FontAwesomeIcon icon={faPhone} />}
+          extraIcon={
+            <>
+              <img src={flag} className={styles.bg} />
+              <img src={arrowDown} className={styles.arrowDown} />
+            </>
+          }
+        />
+        <Input
+          placeholder={"Password"}
+          leftIcon={<FontAwesomeIcon icon={faLock} />}
+          rightIcon={<FontAwesomeIcon icon={faEyeSlash} />}
+        />
+      </div>
+      }
     />
   );
 }

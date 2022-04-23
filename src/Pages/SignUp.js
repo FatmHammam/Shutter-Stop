@@ -1,24 +1,24 @@
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import Input from '../Components/Input';
 import PageLayout from '../Components/PageLayout';
+import Input from '../Components/Input';
 import flag from '../Images/flag.png';
-import background from "../Images/bg2.png";
+import background from "../Images/bg.png";
 import arrowDown from '../Images/arrowDown.png';
-import sideArrow from '../Images/sideArrow.svg';
-import styles from './ForgotPassword.module.scss';
+import styles from './SignUp.module.scss';
 
-function ForgotPassword() {
+function SignUp() {
   return (
     <PageLayout
+      buttonText="Signup"
       background={background}
-      buttonStyle={"150px"}
-      header="Forgot password"
-      sideArrow={<img src={sideArrow} className={styles.arrowDown} />}
-      buttonText="Send Request"
+      header="Get your own account"
+      onButtonClick={() => { window.location = "/verify-code" }}
+
       body={
         <Input
-          placeholder={"+2  XXXXXXXX"}
+          placeholder={"+2 XXXXXXXX"}
           leftIcon={<FontAwesomeIcon icon={faPhone} className={styles.bg} />}
           extraIcon={
             <>
@@ -27,8 +27,13 @@ function ForgotPassword() {
             </>
           }
         />}
+      buttonStyle={"140px"}
+      footer={<div className="text-center fs-6 pt-3">
+        <span href="#">You have an account?</span>
+        <a href="#" className={styles.loginLink}>Log in</a>
+      </div>}
     />
   );
 }
 
-export default ForgotPassword;
+export default SignUp;
