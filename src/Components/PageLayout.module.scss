@@ -6,11 +6,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
 }
 
 .title {
     margin-left: 90px;
+    margin-right: 50px;
     flex: 1;
+
+    @media (max-width: 992px) {
+        margin: 50px auto 20px;
+    }
 
     h1 {
         color: #fff;
@@ -43,12 +52,24 @@
     padding: 63px;
     padding-bottom: 30px;
 
+    @media (max-width: 992px) {
+        margin: 0 auto 50px;
+    }
+
+    @media (max-width: 768px) {
+        width: 90%;
+        padding: 63px 20px;
+    }
+
     .formTitle {
         font-size: 40px;
         font-weight: bold;
         margin: 0;
-    }
 
+        @media (max-width: 768px) {
+            font-size: 30px;
+        }
+    }
 
     .signUpButton {
         width: 100%;
@@ -58,16 +79,6 @@
         color: #fff;
         background-color: #973B6D;
         margin-bottom: 30px;
-    }
-
-    .inputWrapper {
-        display: flex;
-        align-items: center;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 5px 20px;
-        margin-bottom: 15px;
-        margin-top: 10px;
     }
 
     .sideArrow {

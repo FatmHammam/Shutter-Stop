@@ -1,0 +1,15 @@
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 5px 20px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+
+    input {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}

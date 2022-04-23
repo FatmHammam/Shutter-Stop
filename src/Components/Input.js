@@ -1,4 +1,4 @@
-import styles from './PageLayout.module.scss';
+import styles from './Input.module.scss';
 
 function Input({ leftIcon, rightIcon, extraIcon, placeholder }) {
   return (
