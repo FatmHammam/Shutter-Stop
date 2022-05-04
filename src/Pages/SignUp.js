@@ -19,10 +19,10 @@ function SignUp() {
       body={
         <Input
           placeholder={"+2 XXXXXXXX"}
-          leftIcon={<FontAwesomeIcon icon={faPhone} className={styles.bg} />}
+          leftIcon={<FontAwesomeIcon icon={faPhone} />}
           extraIcon={
             <>
-              <img src={flag} className={styles.bg} />
+              <img src={flag} className={styles.flag} />
               <img src={arrowDown} className={styles.arrowDown} />
             </>
           }

@@ -1,0 +1,18 @@
+.servicesLAyout {
+    width: 100%;
+    min-height: 500px;
+    background-image: linear-gradient(rgba(2, 0, 0, 0.0),
+            rgba(2, 0, 0, 0.0)), url('../Images/rect.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .wedding,
+    .birthdays {
+        transform: translate(120px, 70px);
+        color: #6F4AB0;
+    }
+    .events {
+        transform: translate(140px, 70px);
+        color: #6F4AB0;
+    }
+}

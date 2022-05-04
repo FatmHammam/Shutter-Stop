@@ -25,7 +25,7 @@ function Login() {
           leftIcon={<FontAwesomeIcon icon={faPhone} />}
           extraIcon={
             <>
-              <img src={flag} className={styles.bg} />
+              <img src={flag} className={styles.flag} />
               <img src={arrowDown} className={styles.arrowDown} />
             </>
           }

@@ -29,13 +29,13 @@
 textarea {
     width: 150px;
     height: 90px;
+    textarea::placeholder {
+        color: #888;
+        font-weight: bold;
+        text-decoration: underline;
+        transform: scaleX(1.2);
+        transform: scaleY(2);
+        transform: translateY(15px);
+    }
 }
 
-textarea::placeholder {
-    color: #888;
-    font-weight: bold;
-    text-decoration: underline;
-    transform: scaleX(1.2);
-    transform: scaleY(2);
-    transform: translateY(15px);
-}

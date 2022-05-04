@@ -1,0 +1,76 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #FAF8F9;
+
+    .others{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 50px;
+    }
+    .links{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .features {
+            width: 200px;
+            padding: 30px;
+            a {
+                margin-left: 5px;
+                color: #B13B6D;
+                font-weight: 400;
+            }
+
+            button {
+                width: 100px;
+                border-radius: 50px;
+                background-color: transparent;
+                color: #B13B6D;
+                border: 1px solid #B13B6D;
+            }
+        }
+    }
+
+    .lineThrough {
+        width: 50%;
+        margin: auto;
+    }
+
+
+    .circleContainer {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .circle {
+            width: 40px;
+            height: 40px;
+            border: solid 1px #672649;
+            border-radius: 50%;
+            padding: 20px;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .copyRights {
+        width: 100%;
+        height: 40px;
+        margin-top: 50px;
+        background-color: #672649;
+        text-align: center;
+
+        p{
+            color: #fff;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+    }
+}
