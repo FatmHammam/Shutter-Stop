@@ -15,8 +15,13 @@ function Clients() {
   return (
     <Template
       background={about_background}
-      itemsContainerStyle={{paddingBottom: 300}}
-      itemStyle={{ width: `${100 / 6}%`, marginTop: 70 }}
+      itemsContainerStyle={{ paddingBottom: 300 }}
+      itemStyle={{
+        width: `${
+          100 / (window.innerWidth > 992 ? 6 : window.innerWidth > 768 ? 3 : 2)
+        }%`,
+        marginTop: 70,
+      }}
       header={<Header color="#C65FAA" bgColor="#C65FAA" title={t("clients")} />}
       items={[
         <Photo src={homeTown} />,

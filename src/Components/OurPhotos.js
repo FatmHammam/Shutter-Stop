@@ -28,7 +28,13 @@ function OurPhotos({ title }) {
           bgColor="#6F4AB0"
         />
       }
-      itemStyle={{ width: `${100 / 6}%`, padding: "0 20px", marginTop: 40 }}
+      itemStyle={{
+        width: `${
+          100 / (window.innerWidth > 992 ? 6 : window.innerWidth > 768 ? 3 : 2)
+        }%`,
+        padding: "0 20px",
+        marginTop: 40,
+      }}
       items={[
         <Photo src={one} />,
         <Photo src={two} />,

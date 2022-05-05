@@ -19,7 +19,7 @@ function Packages() {
   return (
     <Template
       background={small_squares_background}
-      itemStyle={{ width: `${100 / 3}%`, padding: '0 30px', marginTop: 50 }}
+      itemStyle={{ width: `${100 / (window.innerWidth > 992 ? 3 : 1)}%`, padding: '0 30px', marginTop: 50 }}
       itemsContainerStyle={{ marginBottom: 200 }}
       header={
         <Header bgColor="#fff" color="#672649" title={t("our_packages")} />

@@ -13,7 +13,7 @@ function Output() {
     <Template
       background={about_background}
       itemsContainerStyle={{ marginTop: 50 }}
-      itemStyle={{ width: `${100 / 3}%`, padding: 0 }}
+      itemStyle={{ width: `${100 / (window.innerWidth > 992 ? 3 : 1)}%`, padding: 0 }}
       header={<Header centered={false} color="#C65FAA" bgColor="#C65FAA" title={t("output")} />}
       items={[
         <OutputItem image={gif1} text={t("gifs")} />,

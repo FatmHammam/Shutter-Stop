@@ -11,7 +11,11 @@ function ServicesSlider({ items }) {
       <Header title={t("services")} color="#6F4AB0" />
       <Template
         background={squares_background}
-        itemsContainerStyle={{marginTop: 100, marginBottom: 100}}
+        itemsContainerStyle={{
+          marginTop: 100,
+          marginBottom: 100,
+          flexDirection: window.innerWidth > 992 ? "row" : "column",
+        }}
         itemStyle={{ flex: 1, padding: "0 30px" }}
         items={items.map((item, index) => (
           <ServicesDetails key={index} {...item} />

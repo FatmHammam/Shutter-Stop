@@ -6,6 +6,10 @@
   form {
     width: min-content;
     background-color: #fff;
+
+    @media (max-width: 992px) {
+      width: auto;
+    }
   }
 }
 
@@ -25,6 +29,10 @@
   border: 1px solid #D3D7D8;
   background-color: #F1F5F7;
   font-family: 'Roboto', sans-serif;
+
+  @media (max-width: 992px) {
+    width: 100%;
+  }
 }
 
 .textArea {
@@ -38,6 +46,10 @@
   background-color: #F1F5F7;
   overflow-x: hidden;
   padding: 12px 30px;
+
+  @media (max-width: 992px) {
+    width: 100%;
+  }
 }
 
 .button {

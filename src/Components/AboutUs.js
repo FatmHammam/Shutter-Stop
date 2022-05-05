@@ -8,10 +8,12 @@ function AboutUs() {
   return (
     <div className={styles.background}>
       <div className={styles.container}>
-        <img src={logo} alt="" />
-        <div>
-          <h3>{t("about")}</h3>
-          <p>{t("about_description")}</p>
+        <div className={styles.color_container}>
+          <img src={logo} alt="" />
+          <div>
+            <h3>{t("about")}</h3>
+            <p>{t("about_description")}</p>
+          </div>
         </div>
       </div>
     </div>

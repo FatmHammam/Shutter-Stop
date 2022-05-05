@@ -15,6 +15,14 @@ function Products() {
     <Template
       background={small_squares_background}
       itemsContainerStyle={{ marginTop: 50, paddingBottom: 250 }}
+      itemStyle={{
+        width:
+          window.innerWidth > 992
+            ? "25%"
+            : window.innerWidth > 768
+            ? "50%"
+            : "100%",
+      }}
       header={
         <Header
           centered={false}
