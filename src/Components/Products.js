@@ -13,8 +13,8 @@ function Products() {
   const { t } = useTranslation();
   return (
     <Template
-      itemsContainerStyle={{marginTop: 50}}
       background={small_squares_background}
+      itemsContainerStyle={{ marginTop: 50, paddingBottom: 250 }}
       header={
         <Header
           centered={false}

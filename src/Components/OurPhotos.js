@@ -1,5 +1,5 @@
 import Template from "./Template";
-import PhotoSample from "./PhotoSample";
+import Photo from "./Photo";
 import Header from "./Header";
 import one from "../Images/one.png";
 import two from "../Images/two.png";
@@ -19,7 +19,7 @@ function OurPhotos({ title }) {
   return (
     <Template
       background={small_squares_background}
-      itemsContainerStyle={{marginBottom: 180}}
+      itemsContainerStyle={{ marginBottom: 180 }}
       header={
         <Header
           title={title}
@@ -30,18 +30,18 @@ function OurPhotos({ title }) {
       }
       itemStyle={{ width: `${100 / 6}%`, padding: "0 20px", marginTop: 40 }}
       items={[
-        <PhotoSample photo={one} />,
-        <PhotoSample photo={two} />,
-        <PhotoSample photo={three} />,
-        <PhotoSample photo={four} />,
-        <PhotoSample photo={five} />,
-        <PhotoSample photo={six} />,
-        <PhotoSample photo={seven} />,
-        <PhotoSample photo={eight} />,
-        <PhotoSample photo={nine} />,
-        <PhotoSample photo={ten} />,
-        <PhotoSample photo={eleven} />,
-        <PhotoSample photo={twelve} />,
+        <Photo src={one} />,
+        <Photo src={two} />,
+        <Photo src={three} />,
+        <Photo src={four} />,
+        <Photo src={five} />,
+        <Photo src={six} />,
+        <Photo src={seven} />,
+        <Photo src={eight} />,
+        <Photo src={nine} />,
+        <Photo src={ten} />,
+        <Photo src={eleven} />,
+        <Photo src={twelve} />,
       ]}
     />
   );

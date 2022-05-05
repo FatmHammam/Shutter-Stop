@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Header from "./Header";
 import Template from "./Template";
-import ClientsLogos from "./ClientsLogos";
+import Photo from "./Photo";
 import homeTown from "../Images/homeTown.png";
 import geekCampus from "../Images/geekCampus.png";
 import nfr from "../Images/nfr.png";
@@ -15,21 +15,22 @@ function Clients() {
   return (
     <Template
       background={about_background}
-      itemStyle={{ width: `${100 / 6}%` }}
+      itemsContainerStyle={{paddingBottom: 300}}
+      itemStyle={{ width: `${100 / 6}%`, marginTop: 70 }}
       header={<Header color="#C65FAA" bgColor="#C65FAA" title={t("clients")} />}
       items={[
-        <ClientsLogos photo={homeTown} />,
-        <ClientsLogos photo={geekCampus} />,
-        <ClientsLogos photo={nfr} />,
-        <ClientsLogos photo={homy} />,
-        <ClientsLogos photo={summit1} />,
-        <ClientsLogos photo={homeTown} />,
-        <ClientsLogos photo={homeTown} />,
-        <ClientsLogos photo={geekCampus} />,
-        <ClientsLogos photo={nfr} />,
-        <ClientsLogos photo={homy} />,
-        <ClientsLogos photo={summit2} />,
-        <ClientsLogos photo={homeTown} />,
+        <Photo src={homeTown} />,
+        <Photo src={geekCampus} />,
+        <Photo src={nfr} />,
+        <Photo src={homy} />,
+        <Photo src={summit1} />,
+        <Photo src={homeTown} />,
+        <Photo src={homeTown} />,
+        <Photo src={geekCampus} />,
+        <Photo src={nfr} />,
+        <Photo src={homy} />,
+        <Photo src={summit2} />,
+        <Photo src={homeTown} />,
       ]}
     />
   );
