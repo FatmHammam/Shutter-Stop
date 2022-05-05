@@ -1,6 +1,6 @@
 import styles from './Template.module.scss';
 
-function Template({ header, items, itemStyle = { width: '25%' }, itemWidth = "25%" }) {
+function Template({ header, items, itemStyle = { width: '25%' } }) {
   return (
     <div className={styles.container}>
       {header}

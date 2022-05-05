@@ -13,7 +13,7 @@
 }
 
 .title {
-    margin-left: 90px;
+    margin-left: 140px;
     margin-right: 50px;
     flex: 1;
 
@@ -23,27 +23,29 @@
 
     h1 {
         color: #fff;
+        font-size: 70px;
+        font-weight: bold;
         font-family: lato;
     }
 
     p {
         color: #fff;
+        font-size: 24px;
         font-family: lato;
     }
 
     .firstLetter {
-        color: #b73585;
-        font-family: lato;
+        color: #C65FAA;
     }
 
     .seconedLetter {
-        color: #ac35b7;
+        color: #6F4AB0;
     }
 }
 
 .info {
     margin-top: 0px;
-    margin-right: 120px;
+    margin-right: 140px;
     width: 740px;
     min-height: 500px;
     border: 1px solid #fff;

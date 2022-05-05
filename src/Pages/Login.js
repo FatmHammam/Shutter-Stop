@@ -11,6 +11,7 @@ function Login() {
   return (
     <PageLayout
       buttonText="Login"
+      onButtonClick={() => { window.location = "/" }}
       background={background}
       header="Welcome Back!"
       buttonStyle={"78px"}

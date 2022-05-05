@@ -5,9 +5,17 @@
     justify-content: center;
     color: #6F4AB0;
     font-size: 56px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../Images/rect.svg');
 
     img {
-        width: 400px;
-        height: 365px;
+        flex: 1;
+        margin-top: 80px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
     }
 }

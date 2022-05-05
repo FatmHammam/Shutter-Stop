@@ -1,13 +1,23 @@
-import styles from './PageLayout.module.scss';
+import styles from "./PageLayout.module.scss";
 
-function PageLayout({ sideArrow, header, buttonText, body, background, footer, buttonStyle, onButtonClick }) {
+function PageLayout({
+  sideArrow,
+  header,
+  buttonText,
+  body,
+  background,
+  footer,
+  buttonStyle,
+  onButtonClick,
+}) {
   return (
     <div
       className={styles.pageLayout}
       style={{
         backgroundImage: `linear-gradient(rgba(2, 0, 0, 0.50),
-      rgba(2, 0, 0, 0.50)), url(${background})`
-      }}>
+      rgba(2, 0, 0, 0.50)), url(${background})`,
+      }}
+    >
       <div className={styles.title}>
         <h1>
           <span className={styles.firstLetter}>Sh</span>
@@ -21,15 +31,21 @@ function PageLayout({ sideArrow, header, buttonText, body, background, footer, b
       <div className={styles.info}>
         <div>
           <span className={styles.sideArrow}>
-            <span>{sideArrow}</span>
-            <span className={styles.formTitle}>{header}</span></span>
+            <span className="me-3">{sideArrow}</span>
+            <span className={styles.formTitle}>{header}</span>
+          </span>
           <div className="pt-3 pb-3">
             <form>
               {body}
               <div>
-                <button type='button' className={styles.signUpButton}
-                  style={{ marginTop: `${buttonStyle}` }} onClick={onButtonClick}>
-                  {buttonText}</button>
+                <button
+                  type="button"
+                  className={styles.signUpButton}
+                  style={{ marginTop: `${buttonStyle}` }}
+                  onClick={onButtonClick}
+                >
+                  {buttonText}
+                </button>
               </div>
               {footer}
             </form>

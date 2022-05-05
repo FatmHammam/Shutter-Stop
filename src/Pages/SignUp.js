@@ -15,7 +15,6 @@ function SignUp() {
       background={background}
       header="Get your own account"
       onButtonClick={() => { window.location = "/verify-code" }}
-
       body={
         <Input
           placeholder={"+2 XXXXXXXX"}
@@ -30,7 +29,7 @@ function SignUp() {
       buttonStyle={"140px"}
       footer={<div className="text-center fs-6 pt-3">
         <span href="#">You have an account?</span>
-        <a href="#" className={styles.loginLink}>Log in</a>
+        <a href="/login" className={styles.loginLink}>Log in</a>
       </div>}
     />
   );
