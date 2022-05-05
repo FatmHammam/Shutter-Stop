@@ -1,36 +1,18 @@
-import Slider from "../Images/Slider.png"
+import {Carousel} from "react-bootstrap";
+import Photo from "../Components/Photo";
+import Slider from "../Images/Slider.png";
 
 function VideoSlider() {
-	return (
-		<div className="carousel slide" data-bs-ride="carousel">
-			<div className="carousel-inner">
-				<div className="carousel-item active">
-					<img src={Slider} className="d-block w-100 img1" alt="..." />
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <Carousel>
+      <Carousel.Item>
+        <Photo src={Slider} />
+      </Carousel.Item>
+      <Carousel.Item>
+        <Photo src={Slider} />
+      </Carousel.Item>
+    </Carousel>
+  );
 }
 
 export default VideoSlider;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

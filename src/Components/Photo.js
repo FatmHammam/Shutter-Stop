@@ -1,5 +1,5 @@
 function Photo({ src }) {
-  return <img src={src} alt="..." style={{ width: "100%" }} />;
+  return <img src={src} alt="..." className="w-100" />;
 }
 
 export default Photo;
