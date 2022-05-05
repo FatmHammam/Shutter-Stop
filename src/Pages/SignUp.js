@@ -27,7 +27,7 @@ function SignUp() {
           }
         />}
       buttonStyle={"140px"}
-      footer={<div className="text-center fs-6 pt-3">
+      footer={<div className={`text-center fs-6 pt-3 ${styles.font}`}>
         <span href="#">You have an account?</span>
         <a href="/login" className={styles.loginLink}>Log in</a>
       </div>}

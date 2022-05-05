@@ -15,7 +15,7 @@ function Login() {
       background={background}
       header="Welcome Back!"
       buttonStyle={"78px"}
-      footer={<div className="text-center fs-6 pt-3">
+      footer={<div className={`text-center fs-6 pt-3 ${styles.font}`}>
         <span href="#">Forgot Password?</span>
         <a href="/reset-password" className={styles.loginLink}>Reset now</a>
       </div>}

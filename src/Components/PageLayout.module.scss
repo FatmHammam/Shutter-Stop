@@ -25,13 +25,13 @@
         color: #fff;
         font-size: 70px;
         font-weight: bold;
-        font-family: lato;
+        font-family: 'Lato', sans-serif;
     }
 
     p {
         color: #fff;
         font-size: 24px;
-        font-family: lato;
+        font-family: 'Lato', sans-serif;
     }
 
     .firstLetter {
@@ -64,8 +64,9 @@
     }
 
     .formTitle {
-        font-size: 40px;
-        font-weight: bold;
+        font-size: 54px;
+        font-weight: 900;
+        font-family: 'Lato', sans-serif;
         margin: 0;
 
         @media (max-width: 768px) {
@@ -81,6 +82,8 @@
         color: #fff;
         background-color: #973B6D;
         margin-bottom: 30px;
+        font-weight: bold;
+        font-family: 'Lato', sans-serif;
     }
 
     .sideArrow {

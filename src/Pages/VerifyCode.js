@@ -15,7 +15,7 @@ function VerifyCode() {
             header="Verify Your Number"
 
             body={<div>
-                <p>Code</p>
+                <p className={styles.font}>Code</p>
 
                 <div className="d-flex flex-row" >
                     <textarea className="m-1 text-center form-control rounded" placeholder={'X'}
