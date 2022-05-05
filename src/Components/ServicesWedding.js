@@ -1,4 +1,4 @@
-import styles from './ServicesHomePage.module.scss';
+import styles from './Template';
 import Header from './Header';
 import Template from './Template';
 import wedding from '../Images/wedding.png';

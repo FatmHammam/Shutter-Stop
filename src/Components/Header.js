@@ -1,15 +1,19 @@
-import styles from './Header.module.scss';
+import styles from "./Header.module.scss";
 
-function Header({ leftSpanwidth, rightSpanWidth, title, bgColor, color }) {
-
-    return (
-        <header>
-            <span className={styles.leftBorder} style={{ width: `${leftSpanwidth}` , backgroundColor: `${bgColor}`, color: `${color}`}} ></span>
-            <p style={{color: `${color}`}}>{title}</p>
-            <span className={styles.rightBorder} style={{ width: `${rightSpanWidth}`, backgroundColor: `${bgColor}` }}
-            ></span>
-        </header>
-    );
+function Header({ title, bgColor, color, centered = true }) {
+  return (
+    <div className={styles.header}>
+      <span
+        className={styles.border}
+        style={{ backgroundColor: `${bgColor}` }}
+      />
+      <p style={{ color: `${color}` }}>{title}</p>
+      <span
+        className={styles.border}
+        style={{ backgroundColor: `${bgColor}`, flex: centered ? 1 : 10 }}
+      />
+    </div>
+  );
 }
 
 export default Header;

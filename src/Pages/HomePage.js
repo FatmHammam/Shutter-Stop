@@ -1,4 +1,5 @@
-import HomePageHeader from "../Components/HomePageHeader";
+import { useTranslation } from "react-i18next";
+import Navbar from "../Components/Navbar";
 import VideoSlider from "../Components/VideoSlider";
 import AboutUs from "../Components/AboutUs";
 import ServicesHomePage from "../Components/ServicesHomePage";
@@ -8,15 +9,16 @@ import OurPhotos from "../Components/OurPhotos";
 import Footer from "../Components/Footer";
 
 function HomePage() {
+  const { t } = useTranslation();
   return (
-    <div >
-      <HomePageHeader />
+    <div>
+      <Navbar />
       <VideoSlider />
       <AboutUs />
       <ServicesHomePage />
       <Products />
       <Clients />
-      <OurPhotos title={"Our Photos"} />
+      <OurPhotos title={t("photos")} />
       <Footer />
     </div>
   );
