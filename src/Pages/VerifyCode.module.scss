@@ -3,44 +3,45 @@
 }
 
 .arrowDown {
-    border: none;
-    margin: 0;
-    padding: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .guidLine {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    font-family: 'Lato', sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-family: 'Lato', sans-serif;
 }
 
 .resendLink {
-    img {
-        margin-right: 5px;
-        border: none;
-    }
+  img {
+    margin-right: 5px;
+    border: none;
+  }
 
-    .resend {
-        font-size: 14px;
-        color: #999;
-        text-decoration: none;
-    }
+  .resend {
+    font-size: 14px;
+    color: #999;
+    text-decoration: none;
+  }
 }
 
-textarea {
-    width: 150px;
-    height: 90px;
-    textarea::placeholder {
-        color: #888;
-        font-weight: bold;
-        text-decoration: underline;
-        transform: scaleX(1.2);
-        transform: scaleY(2);
-        transform: translateY(15px);
-    }
+.input {
+  width: 100%;
+  outline: none;
+  display: block;
+  font-size: 40px;
+  margin: 0 10px;
+  font-weight: bold;
+  color: #B1B1B1;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #E9E9E9;
+  font-family: 'Lato', sans-serif;
 }
-

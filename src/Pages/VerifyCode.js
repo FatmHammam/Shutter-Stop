@@ -1,44 +1,47 @@
-import PageLayout from '../Components/PageLayout';
+import { useTranslation } from "react-i18next";
+import PageLayout from "../Components/PageLayout";
 import background from "../Images/bg2.png";
-import icon from '../Images/icon.png';
-import sideArrow from '../Images/sideArrow.svg';
-import styles from './VerifyCode.module.scss';
+import icon from "../Images/icon.png";
+import sideArrow from "../Images/sideArrow.svg";
+import styles from "./VerifyCode.module.scss";
 
 function VerifyCode() {
-    return (
-        <PageLayout
-            background={background}
-            buttonText="Verify"
-            sideArrow={<img src={sideArrow} className={styles.arrowDown} />}
-            buttonStyle={"80px"}
-            onButtonClick={() => { window.location = "/complete-data" }}
-            header="Verify Your Number"
+  const { t } = useTranslation();
 
-            body={<div>
-                <p className={styles.font}>Code</p>
+  function Input() {
+    return <input placeholder="X" className={styles.input} />;
+  }
 
-                <div className="d-flex flex-row" >
-                    <textarea className="m-1 text-center form-control rounded" placeholder={'X'}
-                        style={{ resize: "none" }}></textarea>
-                    <textarea className="m-1 text-center form-control rounded" placeholder={'X'}
-                        style={{ resize: "none" }}></textarea>
-                    <textarea className="m-1 text-center form-control rounded" placeholder={'X'}
-                        style={{ resize: "none" }}></textarea>
-                    <textarea className="m-1 text-center form-control rounded" placeholder={'X'}
-                        style={{ resize: "none" }}></textarea>
-                </div>
+  return (
+    <PageLayout
+      background={background}
+      header={t("verifyNumber")}
+      buttonStyle="80px"
+      buttonText={t("verify")}
+      onButtonClick={() => (window.location = "/complete-data")}
+      sideArrow={<img src={sideArrow} className={styles.arrowDown} />}
+      body={
+        <div>
+          <p className={styles.font}>{t("code")}</p>
 
-                <div className={styles.guidLine}>
-                    <p>You can find the code in your SMS</p>
-                    <div className={styles.resendLink}>
-                        <img src={icon} />
-                        <a className={styles.resend}>SEND AGAIN?</a>
-                    </div>
-                </div>
+          <div className="d-flex flex-row" style={{ height: 100 }}>
+            <Input />
+            <Input />
+            <Input />
+            <Input />
+          </div>
+
+          <div className={styles.guidLine}>
+            <p>{t("findCode")}</p>
+            <div className={styles.resendLink}>
+              <img src={icon} />
+              <a className={styles.resend}>{t("sendAgain")}</a>
             </div>
-            }
-        />
-    );
+          </div>
+        </div>
+      }
+    />
+  );
 }
 
 export default VerifyCode;

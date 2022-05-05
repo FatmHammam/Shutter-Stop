@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLock,
@@ -9,28 +10,27 @@ import PageLayout from "../Components/PageLayout";
 import background from "../Images/bg.png";
 
 function CompleteData() {
+  const { t } = useTranslation();
   return (
     <PageLayout
       background={background}
-      buttonText="Save"
-      buttonStyle={"60px"}
-      onButtonClick={() => {
-        window.location = "/";
-      }}
-      header="Complete your data"
+      header={t("completeData")}
+      buttonStyle="60px"
+      buttonText={t("save")}
+      onButtonClick={() => (window.location = "/")}
       body={
         <div>
           <Input
-            placeholder={"User Name"}
+            placeholder={t("username")}
             leftIcon={<FontAwesomeIcon icon={faUserLarge} />}
           />
           <Input
-            placeholder={"Password"}
+            placeholder={t("password")}
             leftIcon={<FontAwesomeIcon icon={faLock} />}
             rightIcon={<FontAwesomeIcon icon={faEyeSlash} />}
           />
           <Input
-            placeholder={"Confirm Password"}
+            placeholder={t("confirmPassword")}
             leftIcon={<FontAwesomeIcon icon={faLock} />}
             rightIcon={<FontAwesomeIcon icon={faEyeSlash} />}
           />

@@ -1,23 +1,25 @@
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useTranslation } from "react-i18next";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import PageLayout from '../Components/PageLayout';
-import Input from '../Components/Input';
-import flag from '../Images/flag.png';
+import PageLayout from "../Components/PageLayout";
+import Input from "../Components/Input";
+import flag from "../Images/flag.png";
 import background from "../Images/bg.png";
-import arrowDown from '../Images/arrowDown.png';
-import styles from './SignUp.module.scss';
+import arrowDown from "../Images/arrowDown.png";
+import styles from "./SignUp.module.scss";
 
 function SignUp() {
+  const { t } = useTranslation();
   return (
     <PageLayout
-      buttonText="Signup"
       background={background}
-      header="Get your own account"
-      onButtonClick={() => { window.location = "/verify-code" }}
+      header={t("getAccount")}
+      buttonStyle="140px"
+      buttonText={t("signup")}
+      onButtonClick={() => (window.location = "/verify-code")}
       body={
         <Input
-          placeholder={"+2 XXXXXXXX"}
+          placeholder={t("number")}
           leftIcon={<FontAwesomeIcon icon={faPhone} />}
           extraIcon={
             <>
@@ -25,12 +27,16 @@ function SignUp() {
               <img src={arrowDown} className={styles.arrowDown} />
             </>
           }
-        />}
-      buttonStyle={"140px"}
-      footer={<div className={`text-center fs-6 pt-3 ${styles.font}`}>
-        <span href="#">You have an account?</span>
-        <a href="/login" className={styles.loginLink}>Log in</a>
-      </div>}
+        />
+      }
+      footer={
+        <div className={`text-center fs-6 pt-3 ${styles.font}`}>
+          <span>{t("haveAccount")}</span>
+          <a href="/login" className={styles.loginLink}>
+            {t("log_in")}
+          </a>
+        </div>
+      }
     />
   );
 }
