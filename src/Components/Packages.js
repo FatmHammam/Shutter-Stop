@@ -1,59 +1,34 @@
+import { useTranslation } from "react-i18next";
 import Template from "./Template";
-import PackageSample from "./PackageSample";
 import Header from "./Header";
-import p1 from '../Images/p1.png';
-import p2 from '../Images/p2.png';
-import p3 from '../Images/p3.png';
-import styles from './Packages.module.scss'
-
+import Package from "./Package";
+import p1 from "../Images/p1.png";
+import p2 from "../Images/p2.png";
+import p3 from "../Images/p3.png";
+import small_squares_background from "../Images/small_squares_background.svg";
 
 function Packages() {
-    return (
-        <Template
-            header={
-                <Header
-                    leftSpanwidth={"38%"}
-                    bgColor={"#fff"}
-                    color={"#672649"}
-                    title={"Our Packages"}
-                    rightSpanWidth={"38%"}
-                />}
+  const { t } = useTranslation();
 
-            items={
-                [
-                    <PackageSample item={
-                        <div className={styles.packageLayout}>
-                            <img src={p1} alt="" className={styles.packageImage} />
-                            <div className={styles.packageName}>
-                                <h3>SILVER PACKAGE</h3>
-                            </div>
-                        </div>
-                    }
-                    />,
-                    <PackageSample item={
-                        <div className={styles.packageLayout}>
-                            <img src={p2} alt="" className={styles.packageImage} />
-                            <div className={styles.packageName}>
-                                <h3>GOLDEN PACKAGE</h3>
-                            </div>
-                        </div>}
-                    />,
+  const packages = [
+    { photo: p1, text: t("sliver_package") },
+    { photo: p2, text: t("chroma") },
+    { photo: p3, text: t("tree") },
+  ];
 
-                    <PackageSample item={
-                        <div className={styles.packageLayout}>
-                            <img src={p3} alt="" className={styles.packageImage} />
-                            <div className={styles.packageName}>
-                                <h3>PLATINUM PACKAGE</h3>
-                            </div>
-                        </div>}
-
-                    />
-                ]
-            }
-        />
-    );
+  return (
+    <Template
+      background={small_squares_background}
+      itemStyle={{ width: `${100 / 3}%`, padding: '0 30px', marginTop: 50 }}
+      itemsContainerStyle={{ marginBottom: 200 }}
+      header={
+        <Header bgColor="#fff" color="#672649" title={t("our_packages")} />
+      }
+      items={packages.map((item, index) => (
+        <Package key={index} {...item} />
+      ))}
+    />
+  );
 }
 
 export default Packages;
-
-

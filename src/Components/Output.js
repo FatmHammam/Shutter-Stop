@@ -14,7 +14,7 @@ function Output() {
       background={about_background}
       itemsContainerStyle={{ marginTop: 50 }}
       itemStyle={{ width: `${100 / 3}%`, padding: 0 }}
-      header={<Header color="#C65FAA" bgColor="#C65FAA" title={t("output")} />}
+      header={<Header centered={false} color="#C65FAA" bgColor="#C65FAA" title={t("output")} />}
       items={[
         <OutputItem image={gif1} text={t("gifs")} />,
         <OutputItem image={gif2} text={t("threed_images")} />,

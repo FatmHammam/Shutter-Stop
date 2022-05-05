@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import styles from "./Event.module.scss";
 
-function EventsAndProducts({ img, title, bgcolor, color }) {
+function Event({ img, title, containerStyle, bgcolor, color }) {
   const { t } = useTranslation();
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={containerStyle}>
       <div className={styles.eventDetails} style={{ backgroundColor: bgcolor }}>
         <img src={img} />
         <div className={styles.details}>
@@ -18,4 +18,4 @@ function EventsAndProducts({ img, title, bgcolor, color }) {
   );
 }
 
-export default EventsAndProducts;
+export default Event;

@@ -19,6 +19,7 @@ function OurPhotos({ title }) {
   return (
     <Template
       background={small_squares_background}
+      itemsContainerStyle={{marginBottom: 180}}
       header={
         <Header
           title={title}
