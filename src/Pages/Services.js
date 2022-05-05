@@ -1,5 +1,5 @@
 import Navbar from "../Components/Navbar";
-import EventsAndProducts from "../Components/EventAndProducts";
+import Event from "../Components/Event";
 import ServicesWedding from "../Components/ServicesWedding";
 import Output from "../Components/Output";
 import Packages from "../Components/Packages";
@@ -11,7 +11,7 @@ function Services() {
   return (
     <div>
       <Navbar />
-      <EventsAndProducts
+      <Event
         img={event1}
         title={"EVENTS"}
         color={"#C65FAA"}

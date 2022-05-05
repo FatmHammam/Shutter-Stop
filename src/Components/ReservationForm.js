@@ -1,53 +1,24 @@
-import styles from './ReservationForm.module.scss';
-
+import { useTranslation } from "react-i18next";
+import { Container } from "react-bootstrap";
+import styles from "./ReservationForm.module.scss";
 
 function ReservationForm() {
-
-    return (
-        <div className={styles.container}>
-            <form action='' method="POST">
-                <fieldset>
-                    <div id="legend">
-                        <legend className={styles.title}><h1>For Registeration</h1></legend>
-                    </div>
-
-                    <div class="controls">
-                        <input type="text" placeholder="Name" className={styles.feilds} />
-                    </div>
-
-                    <div class="controls">
-                        <input type="text" placeholder="Email" className={styles.feilds} />
-                    </div>
-
-
-                    <div class="controls">
-                        <input type="text" placeholder="Phone" className={styles.feilds} />
-                    </div>
-
-
-                    <div class="controls">
-                        <input type="text" placeholder="Date of event" className={styles.feilds} />
-                    </div>
-
-                    <div class="controls">
-                        <input type="text" placeholder="Address" className={styles.feilds} />
-                    </div>
-
-
-                    <div class="controls">
-                        <input type="text" placeholder="Package" className={styles.feilds} />
-                    </div>
-
-                    <textarea className={styles.textArea} placeholder="Note"></textarea>
-
-                    <div class="controls">
-                        <button class={styles.sendButton}>Send</button>
-                    </div>
-
-                </fieldset>
-            </form>
-        </div>
-    );
+  const { t } = useTranslation();
+  return (
+    <Container className={styles.container}>
+      <form>
+        <h1 className={styles.title}>{t("for_reservation")}</h1>
+        <input placeholder={t("name")} className={styles.input} />
+        <input placeholder={t("email")} className={styles.input} />
+        <input placeholder={t("phone")} className={styles.input} />
+        <input placeholder={t("date")} className={styles.input} />
+        <input placeholder={t("address")} className={styles.input} />
+        <input placeholder={t("package")} className={styles.input} />
+        <textarea placeholder={t("note")} className={styles.textArea} />
+      </form>
+      <button className={styles.button}>{t("send")}</button>
+    </Container>
+  );
 }
 
 export default ReservationForm;

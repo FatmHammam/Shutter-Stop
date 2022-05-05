@@ -1,21 +1,31 @@
-import ReservationForm from "../Components/ReservationForm";
+import { useTranslation } from "react-i18next";
+import Navbar from "../Components/Navbar";
+import Event from "../Components/Event";
 import CoreFeatures from "../Components/CoreFeatures";
-import Production from "../Components/Production";
 import Output from "../Components/Output";
-import Footer from "../Components/Footer";
 import OurPhotos from "../Components/OurPhotos";
+import ReservationForm from "../Components/ReservationForm";
+import Footer from "../Components/Footer";
+import pro from "../Images/pro.png";
 
 function Products() {
-	return (
-		<div>
-			<Production />
-			<CoreFeatures />
-			<Output />
-			<OurPhotos title={"Portofolio"} />
-			<ReservationForm />
-			<Footer />
-		</div>
-	);
+  const { t } = useTranslation();
+  return (
+    <div>
+      <Navbar />
+      <Event
+        img={pro}
+        color="#6F4AB0"
+        bgcolor="#7B5EAC"
+        title={t("products")}
+      />
+      <CoreFeatures />
+      <Output />
+      <OurPhotos title={t("portofolio")} />
+      <ReservationForm />
+      <Footer />
+    </div>
+  );
 }
 
 export default Products;

@@ -1,59 +1,54 @@
 .container {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    margin-left: 80px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-image: url("../Images/bg4.png");
-    
+  padding-top: 250px;
+  padding-bottom: 70px;
+  background-image: url("../Images/bg4.png");
 
-    .title {
-        color: #6F4AB0;
-        margin-bottom: 25px;
-    }
-    form{
-        background-color: #fff;
-    }
+  form {
+    width: min-content;
+    background-color: #fff;
+  }
+}
 
-    .feilds {
-        width: 700px;
-        border-radius: 50px;
-        margin: 10px 0;
-        padding: 5px;
-        border: 1px solid #D3D7D8;
-        background-color: #F1F5F7;
-    }
+.title {
+  color: #6F4AB0;
+  font-weight: 500;
+  margin-bottom: 25px;
+  font-family: 'Roboto', sans-serif;
+}
 
-    .textArea {
-        width: 700px;
-        border-radius: 20px;
-        height: 190px;
-        resize: none;
-        margin-top: 20px;
-        border: 1px solid #D3D7D8;
-        background-color: #F1F5F7;
-        overflow-x: hidden;
-    }
+.input {
+  width: 700px;
+  outline: none;
+  margin: 10px 0;
+  border-radius: 26px;
+  padding: 12px 30px;
+  border: 1px solid #D3D7D8;
+  background-color: #F1F5F7;
+  font-family: 'Roboto', sans-serif;
+}
 
-    textarea::placeholder {
-        transform: translate(10px, 10px);
-    }
+.textArea {
+  outline: none;
+  width: 700px;
+  height: 190px;
+  resize: none;
+  margin-top: 20px;
+  border-radius: 26px;
+  border: 1px solid #D3D7D8;
+  background-color: #F1F5F7;
+  overflow-x: hidden;
+  padding: 12px 30px;
+}
 
-    input::placeholder {
-        transform: translate(10px, 0px);
-    }
-
-    .sendButton{
-        width: 180px;
-        border: none;
-        background-color: #6F4AB0;
-        margin-top: 10px;
-        padding: 5px;
-        border-radius: 50px;
-        color: #fff;
-        font-weight: 400;
-        font-size: 18px;
-    }
-
+.button {
+  width: 180px;
+  border: none;
+  background-color: #6F4AB0;
+  margin-top: 30px;
+  padding: 5px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
 }

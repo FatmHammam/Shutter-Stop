@@ -1,69 +1,71 @@
 .container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../Images/about_background.svg");
+
+  .title {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 50px;
-    margin-bottom: 150px;
-    // background-image: url("../Images/bg7.png");
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
 
-    .title {
-        display: flex;
-        flex-direction: column;
-
-        h1 {
-            width: 50%;
-            color: #973B6D;
-        }
-
-        p {
-            color: #973B6D;
-            margin-top: 50px;
-            font-size: 18px;
-        }
+    h1 {
+      max-width: 220px;
+      font-size: 50px;
+      color: #973B6D;
+      font-weight: bold;
+      margin-top: 35px;
     }
 
-    .features {
-        width: 40%;
+    p {
+      color: #973B6D;
+      margin-top: 50px;
+      font-size: 22px;
+    }
+  }
+
+  .features {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .feature {
+      width: 30%;
+      display: flex;
+      margin-top: 35px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .featureContainer {
+        width: 60px;
+        height: 60px;
+        border: 1px solid #973B6D;
+        border-radius: 40%;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
 
-
-        .feature {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-
-            .featureContainer {
-                width: 60px;
-                height: 60px;
-                border: 1px solid #973B6D;
-                border-radius: 40%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                img {
-                    width: 30px;
-                    height: 20px;
-                    margin-right: 10px;
-                    cursor: pointer;
-                }
-            }
-
-            h4 {
-                color: #973B6D;
-                font-weight: bold;
-            }
-
-            h5 {
-                color: #973B6D;
-                font-size: 21px;
-                font-weight: bold;
-            }
+        img {
+          width: 20px;
+          cursor: pointer;
         }
+      }
+
+      h4 {
+        color: #973B6D;
+        font-weight: 900;
+        font-size: 18px;
+        margin-top: 25px;
+        font-family: 'Roboto', sans-serif;
+      }
     }
+  }
 }

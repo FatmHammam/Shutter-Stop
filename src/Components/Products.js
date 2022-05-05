@@ -20,7 +20,7 @@ function Products() {
           centered={false}
           color="#6F4AB0"
           bgColor="#6F4AB0"
-          title={t("products")}
+          title={t("our_products")}
         />
       }
       items={[
