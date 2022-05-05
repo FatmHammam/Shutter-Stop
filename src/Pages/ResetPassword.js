@@ -5,7 +5,6 @@ import Input from "../Components/Input";
 import PageLayout from "../Components/PageLayout";
 import background from "../Images/bg2.png";
 import sideArrow from "../Images/sideArrow.svg";
-import styles from "./ResetPassword.module.scss";
 
 function ResetPassword() {
   const { t } = useTranslation();
@@ -17,11 +16,7 @@ function ResetPassword() {
       header={t("resetPassword")}
       onButtonClick={() => (window.location = "/")}
       sideArrow={
-        <img
-          src={sideArrow}
-          className={styles.arrowDown}
-          onClick={() => (window.location = "/login")}
-        />
+        <img src={sideArrow} onClick={() => (window.location = "/login")} />
       }
       body={
         <div>

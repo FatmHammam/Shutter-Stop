@@ -19,10 +19,10 @@ function VerifyCode() {
       buttonStyle="80px"
       buttonText={t("verify")}
       onButtonClick={() => (window.location = "/complete-data")}
-      sideArrow={<img src={sideArrow} className={styles.arrowDown} />}
+      sideArrow={<img src={sideArrow} />}
       body={
         <div>
-          <p className={styles.font}>{t("code")}</p>
+          <p className={styles.code}>{t("code")}</p>
 
           <div className="d-flex flex-row" style={{ height: 100 }}>
             <Input />
@@ -31,11 +31,11 @@ function VerifyCode() {
             <Input />
           </div>
 
-          <div className={styles.guidLine}>
+          <div className={styles.guidline}>
             <p>{t("findCode")}</p>
             <div className={styles.resendLink}>
               <img src={icon} />
-              <a className={styles.resend}>{t("sendAgain")}</a>
+              <a>{t("sendAgain")}</a>
             </div>
           </div>
         </div>

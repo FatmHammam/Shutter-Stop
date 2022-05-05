@@ -1,20 +1,12 @@
-.font {
+.link {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  text-align: center;
   font-family: 'Lato', sans-serif;
-}
 
-.flag {
-  padding: 0 5px;
-  margin-left: 10px;
-  border-left: 2px solid #999;
-}
-
-.arrowDown {
-  border: none;
-  margin: 0;
-}
-
-.loginLink {
-  color: #973B6D;
-  text-decoration: none;
-  margin-left: 5px
+  a {
+    color: #973B6D;
+    margin-left: 5px;
+    text-decoration: none;
+  }
 }
