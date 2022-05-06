@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Nav, Navbar, Container } from "react-bootstrap";
 import headerLogo from "../Images/headerLogo.png";
 import styles from "./Navbar.module.scss";
 
@@ -14,17 +15,28 @@ function HomePage() {
   }, []);
 
   return (
-    <div className={`${styles.container} ${offset > 500 && styles.active}`}>
-      <img src={headerLogo} />
-      <div>
-        <a href="/">{t("home")}</a>
-        <a href="/">{t("rental")}</a>
-        <a href="/">{t("featured")}</a>
-        <button>{t("reserve")}</button>
-        <a href="#">{t("ar")}</a>
-      </div>
-    </div>
+    <Navbar expand="md" sticky="top" className={`${styles.container} ${offset > 400 && styles.active}`}>
+      <Container>
+        <Navbar.Brand href="/">
+          <img src={headerLogo} className={styles.logo} />
+        </Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end">
+          <Nav className={styles.nav}>
+            <Nav.Link href="/">{t("home")}</Nav.Link>
+            <Nav.Link href="/">{t("rental")}</Nav.Link>
+            <Nav.Link href="/">{t("featured")}</Nav.Link>
+            <button className={styles.button}>{t("reserve")}</button>
+            <Nav.Link href="/">{t("ar")}</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
 export default HomePage;
+
+{
+  /* <div className={`${styles.container} `}></div> */
+}
