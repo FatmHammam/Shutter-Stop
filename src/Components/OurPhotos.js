@@ -3,13 +3,11 @@ import Photo from "./Photo";
 import Header from "./Header";
 import one from "../Images/one.png";
 import two from "../Images/two.png";
-import three from "../Images/three.png";
 import four from "../Images/four.png";
 import five from "../Images/five.png";
 import six from "../Images/six.png";
 import seven from "../Images/seven.png";
 import eight from "../Images/eight.png";
-import nine from "../Images/nine.png";
 import ten from "../Images/ten.png";
 import eleven from "../Images/eleven.png";
 import twelve from "../Images/twelve.png";
@@ -38,13 +36,13 @@ function OurPhotos({ title }) {
       items={[
         <Photo src={one} />,
         <Photo src={two} />,
-        <Photo src={three} />,
+        <Photo src={twelve} />,
         <Photo src={four} />,
         <Photo src={five} />,
         <Photo src={six} />,
         <Photo src={seven} />,
         <Photo src={eight} />,
-        <Photo src={nine} />,
+        <Photo src={two} />,
         <Photo src={ten} />,
         <Photo src={eleven} />,
         <Photo src={twelve} />,

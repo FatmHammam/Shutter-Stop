@@ -15,7 +15,7 @@ function Clients() {
   return (
     <Template
       background={about_background}
-      itemsContainerStyle={{ paddingBottom: 300 }}
+      itemsContainerStyle={{ paddingBottom: 70 }}
       itemStyle={{
         width: `${
           100 / (window.innerWidth > 992 ? 6 : window.innerWidth > 768 ? 3 : 2)

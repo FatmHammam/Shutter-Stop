@@ -1,6 +1,7 @@
 .container[class~=navbar] {
   padding-top: 15px;
   padding-bottom: 15px;
+  background-color: #ffffff8F;
   transition: all 0.3s ease-in-out;
 }
 
@@ -15,6 +16,8 @@
 }
 
 .logo {
+  width: 90px;
+
   @media (max-width: 768px) {
     width: 60px;
   }

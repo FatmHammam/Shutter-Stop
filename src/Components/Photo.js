@@ -1,5 +1,7 @@
+import styles from "./Photo.module.scss";
+
 function Photo({ src }) {
-  return <img src={src} alt="..." className="w-100" />;
+  return <img src={src} alt="..." className={styles.photo} />;
 }
 
 export default Photo;

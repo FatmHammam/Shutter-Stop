@@ -15,9 +15,9 @@ function HomePage() {
   }, []);
 
   return (
-    <Navbar expand="md" sticky="top" className={`${styles.container} ${offset > 400 && styles.active}`}>
+    <Navbar expand="md" fixed="top" className={styles.container}>
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/" style={{padding: 0}}>
           <img src={headerLogo} className={styles.logo} />
         </Navbar.Brand>
         <Navbar.Toggle />
@@ -36,7 +36,3 @@ function HomePage() {
 }
 
 export default HomePage;
-
-{
-  /* <div className={`${styles.container} `}></div> */
-}
