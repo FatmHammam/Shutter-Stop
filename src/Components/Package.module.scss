@@ -1,8 +1,40 @@
 .container {
   position: relative;
 
+  &:hover {
+    h3 {
+      opacity: 0;
+    }
+
+    ul {
+      opacity: 1;
+    }
+  }
+
   img {
     width: 100%;
+  }
+
+  ul {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    display: flex;
+    font-size: 42px;
+    padding-left: 0;
+    color: #6F4AB0;
+    font-weight: 500;
+    margin-bottom: 0;
+    list-style: none;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff80;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Roboto', sans-serif;
   }
 
   h3 {

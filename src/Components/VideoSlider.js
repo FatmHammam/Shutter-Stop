@@ -1,15 +1,14 @@
 import {Carousel} from "react-bootstrap";
-import Photo from "../Components/Photo";
 import Slider from "../Images/Slider.png";
 
 function VideoSlider() {
   return (
     <Carousel>
       <Carousel.Item>
-        <Photo src={Slider} />
+        <img src={Slider} className="w-100" />
       </Carousel.Item>
       <Carousel.Item>
-        <Photo src={Slider} />
+        <img src={Slider} className="w-100" />
       </Carousel.Item>
     </Carousel>
   );
