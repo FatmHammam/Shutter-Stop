@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import Template from "./Template";
 import Header from "./Header";
 import ProductsInfo from "./ProductsInfo";
+import AnimatedSquares from "./AnimatedSquares";
 import photoBooth from "../Images/photoBooth.png";
 import adsScreen from "../Images/adsScreen.png";
 import small_squares_background from "../Images/small_squares_background.svg";
@@ -24,12 +25,15 @@ function Products() {
             : "100%",
       }}
       header={
-        <Header
-          centered={false}
-          color="#6F4AB0"
-          bgColor="#6F4AB0"
-          title={t("our_products")}
-        />
+        <>
+          <AnimatedSquares />
+          <Header
+            centered={false}
+            color="#6F4AB0"
+            bgColor="#6F4AB0"
+            title={t("our_products")}
+          />
+        </>
       }
       items={[
         <ProductsInfo

@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import Template from "./Template";
 import Header from "./Header";
 import Package from "./Package";
+import AnimatedSquares from "./AnimatedSquares";
 import p1 from "../Images/p1.png";
 import p2 from "../Images/p2.png";
 import p3 from "../Images/p3.png";
@@ -57,7 +58,10 @@ function Packages() {
       }}
       itemsContainerStyle={{ marginBottom: 200 }}
       header={
-        <Header bgColor="#fff" color="#672649" title={t("our_packages")} />
+        <>
+          <AnimatedSquares />
+          <Header bgColor="#fff" color="#672649" title={t("our_packages")} />
+        </>
       }
       items={packages.map((item, index) => (
         <Package key={index} {...item} />

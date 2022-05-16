@@ -1,6 +1,7 @@
 import Template from "./Template";
 import Photo from "./Photo";
 import Header from "./Header";
+import AnimatedSquares from "./AnimatedSquares";
 import one from "../Images/one.png";
 import two from "../Images/two.png";
 import four from "../Images/four.png";
@@ -19,12 +20,15 @@ function OurPhotos({ title }) {
       background={small_squares_background}
       itemsContainerStyle={{ marginBottom: 180 }}
       header={
-        <Header
-          title={title}
-          centered={false}
-          color="#6F4AB0"
-          bgColor="#6F4AB0"
-        />
+        <>
+          <AnimatedSquares />
+          <Header
+            title={title}
+            centered={false}
+            color="#6F4AB0"
+            bgColor="#6F4AB0"
+          />
+        </>
       }
       itemStyle={{
         width: `${
