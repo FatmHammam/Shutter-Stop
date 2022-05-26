@@ -26,6 +26,11 @@ function Products() {
         header={
           <>
             <AnimatedSquares />
+            <AnimatedSquares style={{ top: 100, left: 50 }} />
+            <AnimatedSquares style={{ top: 300, right: 0 }} />
+            <AnimatedSquares
+              style={{ bottom: -30, right: 50, transform: "scale(1.6)" }}
+            />
             <Header
               centered={false}
               color="#6F4AB0"
@@ -70,7 +75,7 @@ function Products() {
       >
         {t("custom_left")}
         <a
-          style={{ cursor: "pointer", textDecoration: 'underline' }}
+          style={{ cursor: "pointer", textDecoration: "underline" }}
           onClick={() => (window.location = "/products")}
         >
           {t("custom_click_here")}

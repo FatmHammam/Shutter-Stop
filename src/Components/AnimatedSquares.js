@@ -1,11 +1,11 @@
 import styles from "./AnimatedSquares.module.scss";
 
-function AnimatedSquares() {
+function AnimatedSquares({style}) {
   return (
-    <>
-      <div className={styles.square}/>
+    <div className={styles.container} style={style}>
+      <div className={styles.square} />
       <div className={styles.anotherSquare} />
-    </>
+    </div>
   );
 }
 

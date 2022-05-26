@@ -20,6 +20,11 @@ function OurPhotos({ title, more }) {
       header={
         <>
           <AnimatedSquares />
+          <AnimatedSquares style={{ bottom: 100, left: 50 }} />
+          <AnimatedSquares style={{ top: 300, right: 0 }} />
+          <AnimatedSquares
+            style={{ bottom: 70, right: 50, transform: "scale(1.8)" }}
+          />
           <Header
             more={more}
             title={title}

@@ -57,7 +57,7 @@ function HomePage() {
             >
               See more
             </p>
-            <FontAwesomeIcon icon={faArrowRight} color="#6F4AB0" />
+            <FontAwesomeIcon size="lg" icon={faArrowRight} color="#6F4AB0" />
           </div>
         }
       />
