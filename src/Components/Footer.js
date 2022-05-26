@@ -60,21 +60,15 @@ function Footer() {
         <div className={styles.circle}>
           <FontAwesomeIcon icon={faInstagram} color={"#672649"} />
         </div>
-        <div className={styles.circle}>
-          <FontAwesomeIcon icon={faYoutube} color={"#672649"} />
-        </div>
-        <div className={styles.circle}>
-          <FontAwesomeIcon icon={faTwitter} color={"#672649"} />
-        </div>
-        <div className={styles.circle}>
-          <FontAwesomeIcon icon={faSnapchat} color={"#672649"} />
-        </div>
-        <div className={styles.circle}>
-          <FontAwesomeIcon icon={faTiktok} color={"#672649"} />
-        </div>
       </div>
       <div className={styles.copyRights}>
-        <p>{t("right_reserved")}</p>
+        <p>
+          {t("right_reserved_left")}
+          <a href="https://pentavalue.com/en" target="_blank">
+            {t("right_reserved_company_name")}
+          </a>
+          {t("right_reserved_right")}
+        </p>
       </div>
     </div>
   );

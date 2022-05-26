@@ -29,13 +29,7 @@ function Clients() {
         <Photo src={nfr} />,
         <Photo src={homy} />,
         <Photo src={summit1} />,
-        <Photo src={homeTown} />,
-        <Photo src={homeTown} />,
-        <Photo src={geekCampus} />,
-        <Photo src={nfr} />,
-        <Photo src={homy} />,
         <Photo src={summit2} />,
-        <Photo src={homeTown} />,
       ]}
     />
   );

@@ -13,47 +13,73 @@ const lorem =
 function Products() {
   const { t } = useTranslation();
   return (
-    <Template
-      background={small_squares_background}
-      itemsContainerStyle={{ marginTop: 50, paddingBottom: 250 }}
-      itemStyle={{
-        width:
-          window.innerWidth > 992
-            ? "25%"
-            : window.innerWidth > 768
-            ? "50%"
-            : "100%",
-      }}
-      header={
-        <>
-          <AnimatedSquares />
-          <Header
-            centered={false}
-            color="#6F4AB0"
-            bgColor="#6F4AB0"
-            title={t("our_products")}
-          />
-        </>
-      }
-      items={[
-        <ProductsInfo
-          photo={photoBooth}
-          description={lorem}
-          name={t("photobooth")}
-        />,
-        <ProductsInfo name={t("ads")} photo={adsScreen} description={lorem} />,
-        <ProductsInfo
-          photo={photoBooth}
-          description={lorem}
-          name={t("entertainment")}
-        />,
-        <ProductsInfo
-          photo={photoBooth}
-          description={lorem}
-          name={t("entertainment")}
-        />,
-      ]}
-    />
+    <>
+      <Template
+        background={small_squares_background}
+        itemsContainerStyle={{ marginTop: 50, marginBottom: 50 }}
+        itemStyle={{
+          width:
+            window.innerWidth > 992
+              ? "25%"
+              : window.innerWidth > 768
+              ? "50%"
+              : "100%",
+        }}
+        header={
+          <>
+            <AnimatedSquares />
+            <Header
+              centered={false}
+              color="#6F4AB0"
+              bgColor="#6F4AB0"
+              title={t("our_products")}
+            />
+          </>
+        }
+        items={[
+          <ProductsInfo
+            photo={photoBooth}
+            description={lorem}
+            name={t("photobooth")}
+          />,
+          <ProductsInfo
+            name={t("ads")}
+            photo={adsScreen}
+            description={lorem}
+          />,
+          <ProductsInfo
+            photo={photoBooth}
+            description={lorem}
+            name={t("weddingScreen")}
+          />,
+          <ProductsInfo
+            photo={photoBooth}
+            description={lorem}
+            name={t("restaurants")}
+          />,
+        ]}
+      />
+      <p
+        style={{
+          width: "90%",
+          fontSize: 25,
+          color: "#555",
+          margin: "auto",
+          fontWeight: 500,
+          marginBottom: 50,
+          fontFamily: "Roboto",
+        }}
+      >
+        {t("custom_left")}
+        <a
+          style={{ cursor: "pointer", textDecoration: 'underline' }}
+          onClick={() => (window.location = "/products")}
+        >
+          {t("custom_click_here")}
+        </a>
+        {t("custom_right")}
+      </p>
+    </>
   );
 }
 

@@ -16,19 +16,19 @@
   }
 
   .links {
-    width: 50%;
+    width: 80%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    justify-content: flex-end;
 
     @media (max-width: 992px) {
       width: 90%;
+      flex-wrap: wrap;
       justify-content: center;
     }
 
     .features {
-      width: 200px;
+      cursor: pointer;
       padding: 30px;
 
       @media (max-width: 992px) {
@@ -68,6 +68,7 @@
     .circle {
       width: 40px;
       height: 40px;
+      cursor: pointer;
       border: solid 1px #672649;
       border-radius: 50%;
       padding: 20px;
@@ -75,6 +76,29 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: all 0.3s ease-in-out;
+
+      svg {
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        border-color: #1877f2;
+        transform: scale(1.05);
+
+        svg {
+          color: #1877f2;
+        }
+
+        
+        &:nth-child(2) {
+          border-color: #c13584;
+
+          svg {
+            color: #c13584;
+          }
+        }
+      }
     }
   }
 
@@ -89,6 +113,11 @@
       color: #fff;
       margin-top: 5px;
       font-weight: 500;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
     }
   }
 }
