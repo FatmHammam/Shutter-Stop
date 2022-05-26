@@ -4,12 +4,13 @@ function Template({
   items,
   header,
   background,
+  containerStyle,
   itemsContainerStyle,
   itemStyle = { width: "25%" },
 }) {
   return (
     <div
-      className={styles.container}
+      className={`${styles.container} ${containerStyle}`}
       style={{ backgroundImage: `url(${background})` }}
     >
       {header}

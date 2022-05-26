@@ -9,6 +9,7 @@ import homy from "../Images/homy.png";
 import summit1 from "../Images/summit1.png";
 import summit2 from "../Images/summit2.png";
 import about_background from "../Images/about_background.svg";
+import styles from "../Main.module.scss";
 
 function Clients() {
   const { t } = useTranslation();
@@ -16,6 +17,7 @@ function Clients() {
     <Template
       background={about_background}
       itemsContainerStyle={{ paddingBottom: 70 }}
+      containerStyle={styles.background_cover_with_hover}
       itemStyle={{
         width: `${
           100 / (window.innerWidth > 992 ? 6 : window.innerWidth > 768 ? 3 : 2)

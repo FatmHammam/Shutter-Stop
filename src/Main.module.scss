@@ -1,0 +1,8 @@
+.background_cover_with_hover {
+  background-size: cover;
+  transition: all 1s ease-in-out;
+
+  &:hover {
+    background-position: 40% 40%;
+  }
+}
