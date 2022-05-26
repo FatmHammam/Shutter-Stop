@@ -12,17 +12,16 @@ import eight from "../Images/eight.png";
 import ten from "../Images/ten.png";
 import eleven from "../Images/eleven.png";
 import twelve from "../Images/twelve.png";
-import small_squares_background from "../Images/small_squares_background.svg";
 
-function OurPhotos({ title }) {
+function OurPhotos({ title, more }) {
   return (
     <Template
-      background={small_squares_background}
       itemsContainerStyle={{ marginBottom: 180 }}
       header={
         <>
           <AnimatedSquares />
           <Header
+            more={more}
             title={title}
             centered={false}
             color="#6F4AB0"

@@ -5,7 +5,6 @@ import ProductsInfo from "./ProductsInfo";
 import AnimatedSquares from "./AnimatedSquares";
 import photoBooth from "../Images/photoBooth.png";
 import adsScreen from "../Images/adsScreen.png";
-import small_squares_background from "../Images/small_squares_background.svg";
 
 const lorem =
   "Lorem ipsum, or lipsum as itor lipsum as it is sometimes known Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out prin graphic or web designs The passage is attributed to an unknown";
@@ -15,8 +14,7 @@ function Products() {
   return (
     <>
       <Template
-        background={small_squares_background}
-        itemsContainerStyle={{ marginTop: 50, marginBottom: 50 }}
+        itemsContainerStyle={{ marginTop: 80, marginBottom: 50 }}
         itemStyle={{
           width:
             window.innerWidth > 992

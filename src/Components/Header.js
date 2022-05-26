@@ -1,6 +1,6 @@
 import styles from "./Header.module.scss";
 
-function Header({ title, bgColor, color, centered = true }) {
+function Header({ title, bgColor, color, more, centered = true }) {
   return (
     <div className={styles.header}>
       <span
@@ -12,6 +12,7 @@ function Header({ title, bgColor, color, centered = true }) {
         className={styles.border}
         style={{ backgroundColor: `${bgColor}`, flex: centered ? 1 : 10 }}
       />
+      {more}
     </div>
   );
 }

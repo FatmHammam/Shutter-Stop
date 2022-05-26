@@ -13,7 +13,7 @@ function Template({
       style={{ backgroundImage: `url(${background})` }}
     >
       {header}
-      <div className={styles.itemsContainer} style={itemsContainerStyle}>
+      <div className={`container ${styles.itemsContainer}`} style={itemsContainerStyle}>
         {items.map(function (element, idx) {
           return (
             <div key={idx} style={itemStyle} className={styles.item}>

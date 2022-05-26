@@ -7,7 +7,7 @@ import squares_background from "../Images/squares_background.svg";
 function ServicesSlider({ items }) {
   const { t } = useTranslation();
   return (
-    <div>
+    <div className="container">
       <Header title={t("services")} color="#6F4AB0" />
       <Template
         background={squares_background}

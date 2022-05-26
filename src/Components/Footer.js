@@ -1,13 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookF,
-  faInstagram,
-  faYoutube,
-  faTwitter,
-  faSnapchat,
-  faTiktok,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import {
   faHome,
   faHandshake,
@@ -22,7 +15,7 @@ function Footer() {
   const { t } = useTranslation();
   return (
     <div className={styles.container}>
-      <div className={styles.others}>
+      <div className={`container ${styles.others}`}>
         <img src={nameImg} alt="" />
         <div className={styles.links}>
           <div className={styles.features}>

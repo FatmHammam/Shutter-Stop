@@ -6,7 +6,6 @@ import AnimatedSquares from "./AnimatedSquares";
 import p1 from "../Images/p1.png";
 import p2 from "../Images/p2.png";
 import p3 from "../Images/p3.png";
-import small_squares_background from "../Images/small_squares_background.svg";
 
 function Packages() {
   const { t } = useTranslation();
@@ -50,7 +49,6 @@ function Packages() {
 
   return (
     <Template
-      background={small_squares_background}
       itemStyle={{
         width: `${100 / (window.innerWidth > 992 ? 3 : 1)}%`,
         padding: "0 30px",
