@@ -1,12 +1,15 @@
 import { useTranslation } from "react-i18next";
+import React from 'react'
 import { Container } from "react-bootstrap";
 import AnimatedSquares from "./AnimatedSquares";
 import styles from "./ReservationForm.module.scss";
+import { forwardRef } from "react";
 
-function ReservationForm() {
+const ReservationForm = forwardRef((props, ref) => {
   const { t } = useTranslation();
+
   return (
-    <Container className={styles.container}>
+    <Container className={styles.container} ref={ref}>
       <AnimatedSquares style={{ top: 100, right: 100 }} />
       <AnimatedSquares style={{ top: 100, right: 550, transform: "rotate(-30deg) scale(1.6)" }} />
       <AnimatedSquares style={{ top: 500, right: 100, transform: "rotate(60deg) scale(2.5)" }} />
@@ -24,6 +27,6 @@ function ReservationForm() {
       <button className={styles.button}>{t("send")}</button>
     </Container>
   );
-}
+});
 
 export default ReservationForm;

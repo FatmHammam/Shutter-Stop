@@ -1,5 +1,4 @@
 import styles from "./PageLayout.module.scss";
-
 function PageLayout({
   sideArrow,
   header,
@@ -20,10 +19,10 @@ function PageLayout({
     >
       <div className={styles.title}>
         <h1>
-          <span className={styles.firstLetter}>Sh</span>
-          utter
-          <span className={styles.seconedLetter}>S</span>
-          top
+          <span className={styles.firstLetter}>D</span>
+          oya
+          <span className={styles.seconedLetter}>B</span>
+          oom
         </h1>
         <p>It's not just a photobooth</p>
       </div>

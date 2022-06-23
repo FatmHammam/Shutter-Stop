@@ -7,8 +7,11 @@ import OurPhotos from "../Components/OurPhotos";
 import ReservationForm from "../Components/ReservationForm";
 import Footer from "../Components/Footer";
 import pro from "../Images/pro.png";
+import { useRef } from "react";
+
 
 function Products() {
+  const resultRef = useRef(null);
   const { t } = useTranslation();
   return (
     <div>
@@ -18,11 +21,12 @@ function Products() {
         color="#6F4AB0"
         bgcolor="#7B5EAC"
         title={t("products")}
+        resultRef={resultRef}
       />
       <CoreFeatures />
       <Output />
       <OurPhotos title={t("portofolio")} />
-      <ReservationForm />
+      <ReservationForm ref={resultRef} />
       <Footer />
     </div>
   );

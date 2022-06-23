@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import styles from "./Event.module.scss";
 
-function Event({ img, title, containerStyle, bgcolor, color }) {
+function Event({ img, title, containerStyle, bgcolor, color, resultRef }) {
+  const moveToForm = () => resultRef.current.scrollIntoView({ behavior: "smooth" });
   const { t } = useTranslation();
   return (
     <div className={styles.container} style={containerStyle}>
@@ -11,7 +12,7 @@ function Event({ img, title, containerStyle, bgcolor, color }) {
           <h1>{title}</h1>
           <hr></hr>
           <p>{t("reserve_description")}</p>
-          <button style={{ color: color }}>{t("reserve_now")}</button>
+          <button style={{ color: color }} onClick={moveToForm}>{t("reserve_now")}</button>
         </div>
       </div>
     </div>

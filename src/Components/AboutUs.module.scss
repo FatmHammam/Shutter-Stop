@@ -17,7 +17,6 @@
   margin: auto;
   min-height: 500px;
   display: flex;
-  background-image: url('../Images/about.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -60,7 +59,7 @@
   padding: 50px;
   max-width: 850px;
   background-color: #fff;
-  box-shadow: 0px 1px 2px 3px #eee;
+  box-shadow: 10px 10px 10px 2px #eee;
 
   @media (max-width: 1200px) {
     flex-direction: column;
