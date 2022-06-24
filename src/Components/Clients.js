@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Carousel } from "react-bootstrap";
 import Header from "./Header";
 import Template from "./Template";
 import Photo from "./Photo";
@@ -19,19 +20,36 @@ function Clients() {
       itemsContainerStyle={{ paddingBottom: 70 }}
       containerStyle={styles.background_cover_with_hover}
       itemStyle={{
-        width: `${
-          100 / (window.innerWidth > 992 ? 6 : window.innerWidth > 768 ? 3 : 2)
-        }%`,
+        width: `${100 / (window.innerWidth > 992 ? 6 : window.innerWidth > 768 ? 3 : 2)
+          }%`,
         marginTop: 70,
       }}
       header={<Header color="#C65FAA" bgColor="#C65FAA" title={t("clients")} />}
       items={[
-        <Photo src={homeTown} />,
-        <Photo src={geekCampus} />,
-        <Photo src={nfr} />,
-        <Photo src={homy} />,
-        <Photo src={summit1} />,
-        <Photo src={summit2} />,
+        // <div className={styles.items}>
+        <Carousel >
+          <Carousel.Item >
+            <Photo src={homeTown} />,
+          </Carousel.Item>
+          <Carousel.Item >
+            <Photo src={geekCampus} />,
+          </Carousel.Item>
+          <Carousel.Item >
+            <Photo src={nfr} />,
+          </Carousel.Item>
+
+          <Carousel.Item >
+            <Photo src={homy} />,
+          </Carousel.Item>
+          <Carousel.Item >
+            <Photo src={summit1} />,
+          </Carousel.Item>
+          <Carousel.Item >
+            <Photo src={summit2} />,
+          </Carousel.Item>
+        </Carousel>
+        // </div >
+
       ]}
     />
   );
