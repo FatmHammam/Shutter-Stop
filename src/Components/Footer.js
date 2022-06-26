@@ -29,13 +29,11 @@ function Footer() {
         </div>
         <div className={styles.icons}>
           <div className={styles.circleContainer}>
-            <div className={styles.circle}>
+            <div className={styles.circle1}>
               <FontAwesomeIcon icon={faFacebookF} color={"#221639"} />
             </div>
           </div>
-          <div className={styles.circle}>
-            <FontAwesomeIcon icon={faInstagram} color={"#fff"} className={styles.icon} size="2x" />
-          </div>
+          <FontAwesomeIcon icon={faInstagram} className={styles.icon} size="2x" />
         </div>
         <div className={styles.features}>
           <button>{t("reserve")}</button>
