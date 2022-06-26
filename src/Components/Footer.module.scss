@@ -23,6 +23,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+
+    .icon {
+      color: #fff;
+    }
+
+    .icon:hover {
+      color: #e72c83;
+    }
   }
 
   .links {
@@ -34,6 +47,7 @@
     @media (max-width: 992px) {
       width: 90%;
       flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
     }
 
@@ -49,9 +63,15 @@
       a {
         margin-left: 5px;
         color: #fff;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 18px;
         opacity: 0.8;
+      }
+
+      a:hover {
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
       }
     }
   }
@@ -63,6 +83,12 @@
     color: #fff;
     opacity: 0.7;
     border: 1px solid #fff;
+
+    @media (max-width: 992px) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
   }
 
   .circleContainer {
@@ -71,7 +97,11 @@
     align-items: center;
     justify-content: center;
 
-    .circle {
+    @media (max-width: 992px) {
+      margin-bottom: 10px;
+    }
+
+    .circle1 {
       width: 20px;
       height: 20px;
       background-color: #fff;
@@ -83,6 +113,10 @@
       align-items: center;
       justify-content: center;
       transition: all 0.3s ease-in-out;
+
+      @media (max-width: 992px) {
+        margin-bottom: 10px;
+      }
 
       svg {
         transition: all 0.3s ease-in-out;
@@ -105,6 +139,14 @@
           }
         }
       }
+    }
+  }
+
+  .circle1:hover {
+    background-color: #1877f2;
+
+    :first-child {
+      color: #fff;
     }
   }
 
